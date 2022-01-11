@@ -7,7 +7,7 @@ function handleScroll(e) {
     if (scDistance > 200) {
       // user scrolled down more than 200 pixels
       // change the position of the arrow on to visible area
-      arrow.style.transform = "translate(0,-13vw)"; 
+      arrow.style.transform = "translate(0,-6rem)"; 
     } else {
       // else they are back on the landing element already
       // place arrow back on the default hidden position
