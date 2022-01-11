@@ -36,18 +36,21 @@ a{
     text-decoration: none;
     color: black;
 }
+
+
 /* The container of all displayed images*/
 #container{
-    max-width: 900px;
-    box-shadow: 2px 2px 80px -40px rgba(0,0,0,1);
-    padding-bottom: 1rem;
-
+   max-width: 900px;
+   box-shadow: 2px 2px 80px -40px rgba(0,0,0,1);
+   padding-bottom: 1rem;
 } 
+
 
 /* the landing element*/
 #land{
     height: 100vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 0;
     pointer-events: none
@@ -55,11 +58,21 @@ a{
 
 /*The textbox on the left*/
 #intro-text{
-    flex: 0 1 40vw;
-    padding: 0.5rem;
+    padding: 3rem 0.5rem 0.5rem 0.5rem;
     pointer-events: none
-    
 }
+
+/*The image pn the right*/
+#intro-img{
+    background-image: url("https://source.unsplash.com/De8wMYoSSBc");
+    height: 100vh;
+    width: 100vw;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+   
+}
+    
 /*the button to scroll to the gallery part*/
 .btn{
     padding: 0.5rem 2rem;
@@ -74,17 +87,6 @@ a{
 .btn:hover{
     background-color:#e7e5e5;
 }
-
-/*The image pn the right*/
-#intro-img{
-    background-image: url("https://source.unsplash.com/De8wMYoSSBc");
-    height: 100vh;
-    background-position: center; 
-    background-repeat: no-repeat;
-    background-size: cover; 
-    flex: 0 1 60vw;
-}
-
 
 /*The title where the gallery starts*/
 #title{
@@ -129,6 +131,21 @@ footer span{
     font-weight: bold;
 }
 
+@media(min-width: 500px) {
+
+/*landing elements side by side*/
+#land{
+    flex-direction: row;
+}
+
+#intro-text{
+    flex: 0 1 40vw;
+}
+
+#intro-img{
+    flex: 0 1 60vw;
+}
+}
 /* for screen sizes 750 size and up*/
 
 @media(min-width: 750px) {
